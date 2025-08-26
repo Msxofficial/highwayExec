@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+html, body, #root { height: 100%; }
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+/* Dark mode base */
+.dark body {
+  @apply bg-slate-900 text-slate-100;
+}
+
+.container-grid {
+  @apply grid grid-cols-12 gap-4 md:gap-6;
+}
+
+.card {
+  @apply rounded-2xl border border-gray-200 shadow-sm bg-white;
+}
+.dark .card { @apply border-slate-700 bg-slate-800 shadow-none; }
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-white shadow-soft hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-brand/40;
+}
+.dark .btn-primary { @apply shadow-none; }
+
+/* Generic button styling in dark mode */
+.dark .btn-outline,
+.dark .btn-default,
+.dark .btn {
+  @apply border-slate-600 text-slate-100 hover:bg-slate-700/50;
+}
