@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" width="1440" height="720">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="asphalt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <!-- sky -->
+  <rect width="1440" height="720" fill="url(#sky)"/>
+  <!-- sun glow -->
+  <circle cx="1080" cy="160" r="140" fill="url(#sun)" opacity="0.35"/>
+  <!-- mountains -->
+  <g fill="#0f172a" opacity="0.45">
+    <path d="M0 430 L120 360 L240 420 L360 380 L480 420 L600 360 L720 430 L840 370 L960 420 L1080 360 L1200 410 L1320 380 L1440 420 L1440 720 L0 720 Z"/>
+  </g>
+  <!-- road (perspective) -->
+  <g>
+    <path d="M-80 720 L720 380 L1520 720 Z" fill="url(#asphalt)"/>
+    <!-- lane markings -->
+    <g stroke="#f8fafc" stroke-width="6" stroke-linecap="round" opacity="0.8">
+      <line x1="720" y1="380" x2="720" y2="720" stroke-dasharray="16 24"/>
+      <line x1="580" y1="420" x2="-40" y2="720" stroke-dasharray="16 30" opacity="0.5"/>
+      <line x1="860" y1="420" x2="1520" y2="720" stroke-dasharray="16 30" opacity="0.5"/>
+    </g>
+    <!-- guard rails -->
+    <g stroke="#334155" stroke-width="8" opacity="0.7">
+      <line x1="500" y1="470" x2="-200" y2="720"/>
+      <line x1="940" y1="470" x2="1600" y2="720"/>
+    </g>
+  </g>
+  <!-- subtle city silhouette -->
+  <g fill="#0b1220" opacity="0.25">
+    <rect x="80" y="260" width="20" height="90"/>
+    <rect x="110" y="240" width="26" height="110"/>
+    <rect x="150" y="250" width="18" height="100"/>
+    <rect x="1240" y="250" width="22" height="100"/>
+    <rect x="1270" y="230" width="28" height="120"/>
+    <rect x="1310" y="260" width="18" height="90"/>
+  </g>
+  <!-- decorative lines -->
+  <g stroke="#38bdf8" stroke-width="2" opacity="0.25">
+    <path d="M0 120 Q240 60 480 120 T960 120 T1440 120" fill="none"/>
+    <path d="M0 200 Q240 150 480 200 T960 200 T1440 200" fill="none"/>
+  </g>
+</svg>
